@@ -1,5 +1,4 @@
 //Entrada del diario
-import 'dart:math';
 
 class Log {
   Log({

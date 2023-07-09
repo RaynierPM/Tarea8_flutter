@@ -34,11 +34,20 @@ ThemeData styles = ThemeData(
       fontWeight: FontWeight.bold,
       fontFamily: primaryFont
     ),
+    titleLarge: TextStyle(
+      fontSize: 30.0,
+      fontWeight: FontWeight.bold,
+      fontFamily: primaryFont
+    ),
     titleSmall: TextStyle(
       fontSize: 18.0,
       fontWeight: FontWeight.bold,
       fontFamily: primaryFont,
       fontStyle: FontStyle.italic
+    ),
+    bodyMedium: TextStyle(
+      fontFamily: textoFont,
+      fontSize: 16.0
     )
   ),
 
@@ -72,6 +81,19 @@ ThemeData styles = ThemeData(
   floatingActionButtonTheme: FloatingActionButtonThemeData(
     backgroundColor: accentColor,
     foregroundColor: Colors.white
+  ),
+
+  inputDecorationTheme: InputDecorationTheme(
+    labelStyle: TextStyle(
+      color: accentColor,
+      fontSize: 20.0,
+    ),
+    hintStyle: TextStyle(
+      color: primary,
+      fontSize: 20.0
+    ),
+    
+    
   )
 
 );

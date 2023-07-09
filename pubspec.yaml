@@ -38,6 +38,8 @@ dependencies:
   sqflite: ^2.2.8+4
   path: ^1.8.3
   fluttericon: ^2.0.0
+  image_picker: ^1.0.0
+  gallery_saver: ^2.3.2
 
 dev_dependencies:
   flutter_test:

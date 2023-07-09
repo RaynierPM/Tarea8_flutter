@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:tarea8_flutter/theme/themeData.dart';
 import 'package:fluttericon/linecons_icons.dart';
 import 'package:tarea8_flutter/entradas.dart';
+import 'package:tarea8_flutter/add.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
+
+class MyApp extends StatelessWidget with RouteAware{
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +19,11 @@ class MyApp extends StatelessWidget {
       title: "Tarea#8_Flutter App",
       debugShowCheckedModeBanner: false,
       theme: styles,
-
-      initialRoute: '/',
+      navigatorObservers: [routeObserver],
+      home: const MainPage(),
       routes: {
-        '/': (context) => const MainPage(),
         '/List': (context) => const Entradas(),
+        '/add': (context) => const AgregarEntrada(),
       }
     );
   }
