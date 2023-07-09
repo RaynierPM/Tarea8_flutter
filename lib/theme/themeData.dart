@@ -33,9 +33,19 @@ ThemeData styles = ThemeData(
       fontSize: 26.0,
       fontWeight: FontWeight.bold,
       fontFamily: primaryFont
+    ),
+    titleSmall: TextStyle(
+      fontSize: 18.0,
+      fontWeight: FontWeight.bold,
+      fontFamily: primaryFont,
+      fontStyle: FontStyle.italic
     )
   ),
 
+  iconTheme: IconThemeData(
+    color: accentColor,
+    
+  ),
   // Buttons
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
@@ -44,12 +54,24 @@ ThemeData styles = ThemeData(
       foregroundColor: Colors.white,
       textStyle: TextStyle(
         fontWeight: FontWeight.bold,
-        fontSize: 16.0,
+        fontSize: 20.0,
         fontStyle: FontStyle.italic,
         fontFamily: secondaryFont
       )
+    ),
+  ),
 
+  iconButtonTheme: IconButtonThemeData(
+    style: IconButton.styleFrom(
+      padding: const EdgeInsets.all(5.0),
+      foregroundColor: accentColor,
+      disabledForegroundColor: accentColor,
     )
+  ),
+
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: accentColor,
+    foregroundColor: Colors.white
   )
 
 );

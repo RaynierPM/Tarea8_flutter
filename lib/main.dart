@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tarea8_flutter/theme/themeData.dart';
+import 'package:fluttericon/linecons_icons.dart';
+import 'package:tarea8_flutter/entradas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MainPage(),
-        '/List': (context) => Scaffold(),
+        '/List': (context) => const Entradas(),
       }
     );
   }
@@ -30,7 +32,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      title: Center(child: Text("Tu diario :3")),
+      title: const Center(child: Text("Tu diario :3")),
     ),
 
     body: 
@@ -43,19 +45,28 @@ class MainPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Text("Guardamos tus secretos :3", style: Theme.of(context).textTheme.titleMedium,),
-              Icon(Icons.heart_broken, color: Colors.red, size: Theme.of(context).textTheme.titleMedium!.fontSize,)
+              Text("Guardamos tus secretos ", style: Theme.of(context).textTheme.titleMedium,),
+              Icon(Linecons.heart, color: Colors.red, size: Theme.of(context).textTheme.titleMedium!.fontSize,)
             ],),
+            getSpacer(20.0),
             Expanded(
               child: Center(
                 child: ElevatedButton(
                   onPressed: () => Navigator.pushNamed(context, '/List'), 
                   style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
-                    minimumSize: const MaterialStatePropertyAll<Size>(Size(300.0, 0.0))
+                    minimumSize: const MaterialStatePropertyAll<Size>(Size(300.0, 0.0)),
+                    textStyle: MaterialStatePropertyAll<TextStyle>(TextStyle(
+                      fontSize: 30.0, 
+                      fontFamily: secondaryFont,
+                      fontWeight: FontWeight.bold,
+                      // backgroundColor: accentColor
+                    )),
                   ),
-                  child: const Text("Entrar al Diario"),
+                  child: const Text("Entrar al Diario")
                 ),
-              ))
+              )
+            ),
+            getSpacer(20.0)
           ],
         ),
         )
