@@ -2,6 +2,7 @@
 
 class Log {
   Log({
+    // ignore: non_constant_identifier_names
     this.ID, 
     required this.titulo, 
     required this.fecha,
@@ -10,6 +11,7 @@ class Log {
     this.audioPath
   });
 
+  // ignore: non_constant_identifier_names
   int? ID;
   String titulo;
   String descripcion;

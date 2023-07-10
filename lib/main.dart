@@ -10,8 +10,19 @@ void main() {
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 
-class MyApp extends StatelessWidget with RouteAware{
+class MyApp extends StatefulWidget with RouteAware{
   MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,4 +85,8 @@ class MainPage extends StatelessWidget {
         ),
         )
   );
+
+
+
+
 }

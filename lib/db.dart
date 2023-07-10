@@ -5,6 +5,7 @@ import 'package:tarea8_flutter/models/log.dart';
 class AppDatabase {
   static final AppDatabase _instance = AppDatabase._internal();
 
+  // ignore: non_constant_identifier_names
   final String DB_NAME = "Database.db";
   final String tableName = "entradas_diario";
   final String columnID = "ID";
@@ -72,6 +73,7 @@ class AppDatabase {
     return datos;
   }
 
+  // ignore: non_constant_identifier_names
   Future<void> deleteLog(int? ID) async {
     if (ID != null) {
       final db = await _instance.db;
@@ -86,7 +88,6 @@ class AppDatabase {
   Future<void> deleteAll() async {
     final db = await _instance.db;
     db!.delete(tableName);
-
   }
 
 

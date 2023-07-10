@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 
@@ -47,7 +48,9 @@ ThemeData styles = ThemeData(
     ),
     bodyMedium: TextStyle(
       fontFamily: textoFont,
-      fontSize: 16.0
+      fontSize: 16.0,
+      fontStyle: FontStyle.italic
+
     )
   ),
 
@@ -84,6 +87,7 @@ ThemeData styles = ThemeData(
   ),
 
   inputDecorationTheme: InputDecorationTheme(
+
     labelStyle: TextStyle(
       color: accentColor,
       fontSize: 20.0,

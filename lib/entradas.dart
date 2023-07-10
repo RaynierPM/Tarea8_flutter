@@ -119,10 +119,10 @@ class EntradasState extends State<Entradas> with RouteAware {
                         showDialog(
                           context: context, 
                           builder: (context) {
-                            return Visutalizar(datos: entradas[index]);
+                            return Visualizar(datos: entradas[index]);
                           });
                       },
-                      icon: Icon(Icons.ads_click),
+                      icon: const Icon(Icons.ads_click),
                       ), 
                     IconButton(
                       onPressed: () {
